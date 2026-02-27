@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Bois Rénovation | Artisan Menuisier Expert</title>
+    <meta name="description" content="Expert en construction bois, charpente et rénovation. Artisan qualifié proposant des finitions haut de gamme pour vos projets sur mesure.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#2C1E18',      /* Deep Brown */
+                            primary: '#3E2C23',   /* Primary Wood Tone */
+                            accent: '#C5A065',    /* Copper/Gold */
+                            accentHover: '#B08D55',
+                            light: '#F9F9F9',     /* Off-white */
+                            beige: '#FDFCF8',     /* Warm background */
+                            charcoal: '#333333',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-light text-brand-charcoal font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Header -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="absolute inset-0 bg-brand-light/95 backdrop-blur-md shadow-sm opacity-0 transition-opacity duration-300" id="header-bg"></div>
+        <div class="container mx-auto px-6 relative flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-serif font-bold tracking-wide text-brand-dark z-50 group">
+                CBR<span class="text-brand-accent">.</span>
+                <span class="block text-xs font-sans font-light tracking-[0.2em] text-brand-charcoal uppercase group-hover:text-brand-accent transition-colors">Construction Bois</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide text-brand-dark">
+                <a href="#about" class="hover:text-brand-accent transition-colors">À propos</a>
+                <a href="#services" class="hover:text-brand-accent transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-brand-accent transition-colors">Réalisations</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors">Contact</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="hidden md:block z-50">
+                <a href="tel:+33558524456" class="flex items-center gap-2 text-brand-dark hover:text-brand-accent transition-colors font-medium text-sm">
+                    <i data-lucide="phone" class="w-4 h-4 text-brand-accent"></i>
+                    <span>05 58 52 44 56</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden z-50 p-2 text-brand-dark focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-brand-light z-40 flex flex-col justify-center items-center opacity-0 pointer-events-none transition-all duration-300">
+            <nav class="flex flex-col space-y-8 text-center text-xl font-serif text-brand-dark">
+                <a href="#about" class="mobile-link hover:text-brand-accent">À propos</a>
+                <a href="#services" class="mobile-link hover:text-brand-accent">Services</a>
+                <a href="#portfolio" class="mobile-link hover:text-brand-accent">Réalisations</a>
+                <a href="#contact" class="mobile-link hover:text-brand-accent">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-zRzKNNLkBu8?fm=jpg&w=2070&q=80&fit=crop" 
+                alt="Construction bois haut de gamme" 
+                class="w-full h-full object-cover object-center scale-105 animate-slow-zoom"
+            >
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-brand-dark/60"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="container mx-auto px-6 relative z-10 text-center text-white mt-20">
+            <span class="inline-block py-1 px-3 border border-brand-accent/50 rounded-full text-xs tracking-[0.2em] uppercase text-brand-accent mb-6 fade-up delay-100">
+                Artisanat d'Excellence
+            </span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-medium leading-tight mb-6 fade-up delay-200">
+                L’Excellence du Bois <br>
+                <span class="italic font-light text-brand-accent">au Service de Vos Projets</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed fade-up delay-300">
+                Construction Bois Rénovation conçoit et réalise vos projets avec précision, savoir-faire artisanal et finitions haut de gamme.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center fade-up delay-400">
+                <a href="#contact" class="px-8 py-4 bg-brand-accent text-white font-medium tracking-wide rounded hover:bg-brand-accentHover transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-accent/20">
+                    Demander un devis
+                </a>
+                <a href="#portfolio" class="px-8 py-4 border border-white/30 text-white font-medium tracking-wide rounded hover:bg-white hover:text-brand-dark transition-all backdrop-blur-sm">
+                    Voir nos réalisations
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce fade-up delay-700">
+            <i data-lucide="arrow-down" class="w-6 h-6 text-white/70"></i>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="bg-brand-beige border-b border-brand-primary/5 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-4 opacity-70 hover:opacity-100 transition-opacity duration-500">
+                <div class="flex items-center gap-3">
+                    <div class="flex text-brand-accent">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <span class="font-medium text-brand-dark">Note 5.0</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="award" class="w-5 h-5 text-brand-accent"></i>
+                    <span class="text-sm uppercase tracking-wider text-brand-dark">Artisan Qualifié</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="file-check" class="w-5 h-5 text-brand-accent"></i>
+                    <span class="text-sm uppercase tracking-wider text-brand-dark">Devis Gratuit</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i data-lucide="clock" class="w-5 h-5 text-brand-accent"></i>
+                    <span class="text-sm uppercase tracking-wider text-brand-dark">Réponse Rapide</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-brand-light overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Grid -->
+                <div class="relative scroll-trigger fade-right">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-accent z-0"></div>
+                    <div class="relative z-10 rounded-lg overflow-hidden shadow-2xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=2070&auto=format&fit=crop" 
+                            alt="Atelier de menuiserie" 
+                            class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                        >
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-brand-dark p-6 hidden md:flex flex-col justify-center items-center text-center z-20 shadow-xl rounded-lg">
+                        <span class="text-4xl font-serif text-brand-accent mb-2">15+</span>
+                        <span class="text-white text-sm uppercase tracking-widest">Années d'expérience</span>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="scroll-trigger fade-left">
+                    <h4 class="text-brand-accent uppercase tracking-widest text-sm font-semibold mb-4">Notre Histoire</h4>
+                    <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mb-8 leading-tight">
+                        À propos de <br>Construction Bois Rénovation
+                    </h2>
+                    <div class="space-y-6 text-gray-600 font-light text-lg leading-relaxed">
+                        <p>
+                            Ancrés dans une tradition artisanale d'excellence, nous transformons le bois en véritables œuvres architecturales. Chaque projet est une rencontre entre vos aspirations et notre savoir-faire technique.
+                        </p>
+                        <p>
+                            De la sélection rigoureuse des essences à la pose finale, nous cultivons une obsession pour le détail. Notre approche privilégie des matériaux durables et une exécution sans compromis, garantissant la pérennité et l'esthétique de votre habitat.
+                        </p>
+                    </div>
+                    
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 mb-10">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent"></i>
+                            <span class="text-brand-dark">Expertise certifiée</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent"></i>
+                            <span class="text-brand-dark">Matériaux premium</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent"></i>
+                            <span class="text-brand-dark">Projets sur mesure</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-accent"></i>
+                            <span class="text-brand-dark">Accompagnement dédié</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="inline-flex items-center gap-2 text-brand-dark font-medium border-b border-brand-accent hover:text-brand-accent transition-colors pb-1">
+                        Discuter de votre projet <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-brand-beige">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 scroll-trigger fade-up">
+                <span class="text-brand-accent uppercase tracking-widest text-sm font-semibold">Nos Compétences</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mt-4 mb-6">Expertise & Savoir-Faire</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-brand-accent/20 scroll-trigger fade-up">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
+                        <i data-lucide="hammer" class="w-6 h-6 text-brand-dark group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Charpente Traditionnelle</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">Conception et restauration de charpentes avec des assemblages précis pour une solidité à l'épreuve du temps.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-brand-accent/20 scroll-trigger fade-up delay-100">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
+                        <i data-lucide="home" class="w-6 h-6 text-brand-dark group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Ossature Bois</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">Construction de maisons à ossature bois alliant performance énergétique, esthétique moderne et confort.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-brand-accent/20 scroll-trigger fade-up delay-200">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
+                        <i data-lucide="sun" class="w-6 h-6 text-brand-dark group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Terrasse d'Exception</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">Création de terrasses en bois exotique ou composite, véritables extensions de votre espace de vie vers l'extérieur.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-brand-accent/20 scroll-trigger fade-up">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
+                        <i data-lucide="armchair" class="w-6 h-6 text-brand-dark group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Aménagement Intérieur</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">Agencement sur mesure, parquets, claustras et mobilier intégré pour sublimer vos intérieurs.</p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-brand-accent/20 scroll-trigger fade-up delay-100">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
+                        <i data-lucide="repeat" class="w-6 h-6 text-brand-dark group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Rénovation</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">Restauration de l'ancien avec respect du patrimoine et apport de techniques modernes.</p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-soft transition-all duration-300 transform hover:-translate-y-2 border border-transparent hover:border-brand-accent/20 scroll-trigger fade-up delay-200">
+                    <div class="w-14 h-14 bg-brand-beige rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
+                        <i data-lucide="maximize" class="w-6 h-6 text-brand-dark group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Extension Bois</h3>
+                    <p class="text-gray-600 font-light leading-relaxed mb-6">Agrandissement de votre habitat : surélévation ou extension latérale en harmonie avec l'existant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-brand-light">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 scroll-trigger fade-up">
+                <div>
+                    <span class="text-brand-accent uppercase tracking-widest text-sm font-semibold">Réalisations</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mt-4">Notre Galerie</h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2 text-brand-dark hover:text-brand-accent transition-colors border-b border-transparent hover:border-brand-accent pb-1">
+                    Voir tous les projets <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden h-[400px] rounded-lg cursor-pointer scroll-trigger fade-up">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Maison contemporaine bois" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/40 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <span class="text-brand-accent text-sm tracking-widest uppercase">Ossature Bois</span>
+                        <h3 class="text-white text-2xl font-serif mt-2">Villa des Landes</h3>
+                    </div>
+                </div>
+
+                <!-- Project 2 (Large) -->
+                <div class="group relative overflow-hidden h-[400px] lg:col-span-2 rounded-lg cursor-pointer scroll-trigger fade-up delay-100">
+                    <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=2070&auto=format&fit=crop" alt="Terrasse haut de gamme" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/40 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <span class="text-brand-accent text-sm tracking-widest uppercase">Extérieur</span>
+                        <h3 class="text-white text-2xl font-serif mt-2">Terrasse Panoramique</h3>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden h-[400px] rounded-lg cursor-pointer scroll-trigger fade-up">
+                    <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?q=80&w=2070&auto=format&fit=crop" alt="Intérieur bois" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/40 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <span class="text-brand-accent text-sm tracking-widest uppercase">Intérieur</span>
+                        <h3 class="text-white text-2xl font-serif mt-2">Loft Haussmannien</h3>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group relative overflow-hidden h-[400px] rounded-lg cursor-pointer scroll-trigger fade-up delay-100">
+                    <img src="https://images.unsplash.com/photo-1533044309907-0fa3413da946?q=80&w=1974&auto=format&fit=crop" alt="Rénovation charpente" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/40 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <span class="text-brand-accent text-sm tracking-widest uppercase">Rénovation</span>
+                        <h3 class="text-white text-2xl font-serif mt-2">Grange Réhabilitée</h3>
+                    </div>
+                </div>
+                 <!-- Project 5 -->
+                 <div class="group relative overflow-hidden h-[400px] rounded-lg cursor-pointer scroll-trigger fade-up delay-200">
+                    <img src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" alt="Extension moderne" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/40 transition-colors duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <span class="text-brand-accent text-sm tracking-widest uppercase">Extension</span>
+                        <h3 class="text-white text-2xl font-serif mt-2">Extension Cube</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <a href="#" class="inline-flex items-center gap-2 text-brand-dark hover:text-brand-accent transition-colors font-medium">
+                    Voir tous les projets <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="scroll-trigger fade-right">
+                    <span class="text-brand-accent uppercase tracking-widest text-sm font-semibold">Nos Engagements</span>
+                    <h2 class="text-4xl md:text-5xl font-serif mt-4 mb-6 leading-tight">Pourquoi choisir <br>notre expertise ?</h2>
+                    <p class="text-gray-400 font-light text-lg mb-8 max-w-md">
+                        Nous ne construisons pas simplement des structures, nous bâtissons des relations de confiance basées sur la qualité et la transparence.
+                    </p>
+                    <a href="#contact" class="px-8 py-4 bg-brand-accent text-white font-medium tracking-wide rounded hover:bg-white hover:text-brand-dark transition-all">
+                        Démarrer votre projet
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors scroll-trigger fade-up">
+                        <i data-lucide="medal" class="w-10 h-10 text-brand-accent mb-4"></i>
+                        <h3 class="text-xl font-serif mb-2">Savoir-faire Artisanal</h3>
+                        <p class="text-gray-400 text-sm font-light">Des compagnons passionnés maîtrisant les techniques ancestrales et modernes.</p>
+                    </div>
+                     <!-- Feature 2 -->
+                     <div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors scroll-trigger fade-up delay-100">
+                        <i data-lucide="gem" class="w-10 h-10 text-brand-accent mb-4"></i>
+                        <h3 class="text-xl font-serif mb-2">Finitions Premium</h3>
+                        <p class="text-gray-400 text-sm font-light">Le souci du détail est notre signature, pour un rendu esthétique irréprochable.</p>
+                    </div>
+                     <!-- Feature 3 -->
+                     <div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors scroll-trigger fade-up delay-200">
+                        <i data-lucide="timer" class="w-10 h-10 text-brand-accent mb-4"></i>
+                        <h3 class="text-xl font-serif mb-2">Respect des Délais</h3>
+                        <p class="text-gray-400 text-sm font-light">Une planification rigoureuse pour livrer votre chantier en temps et en heure.</p>
+                    </div>
+                     <!-- Feature 4 -->
+                     <div class="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors scroll-trigger fade-up delay-300">
+                        <i data-lucide="heart-handshake" class="w-10 h-10 text-brand-accent mb-4"></i>
+                        <h3 class="text-xl font-serif mb-2">Conseils Personnalisés</h3>
+                        <p class="text-gray-400 text-sm font-light">Une écoute active pour adapter techniquement vos envies à la réalité.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-brand-light">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-brand-dark text-center mb-16 scroll-trigger fade-up">La satisfaction de nos clients</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative scroll-trigger fade-up">
+                    <div class="absolute -top-4 left-8 bg-brand-accent text-white p-2 rounded-full">
+                        <i data-lucide="quote" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <div class="flex text-brand-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 font-light italic mb-6">"Un travail remarquable pour notre extension bois. L'équipe a été discrète, efficace et le résultat dépasse nos espérances. Les finitions sont parfaites."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-brand-dark font-bold">P</div>
+                        <div>
+                            <p class="font-medium text-brand-dark">Pierre L.</p>
+                            <p class="text-xs text-gray-400">Rénovation complète</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative scroll-trigger fade-up delay-100">
+                    <div class="absolute -top-4 left-8 bg-brand-accent text-white p-2 rounded-full">
+                        <i data-lucide="quote" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <div class="flex text-brand-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 font-light italic mb-6">"Nous avons fait appel à CBR pour notre terrasse. Le conseil sur le choix du bois a été précieux. Artisan sérieux que je recommande vivement."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-brand-dark font-bold">S</div>
+                        <div>
+                            <p class="font-medium text-brand-dark">Sophie M.</p>
+                            <p class="text-xs text-gray-400">Terrasse Ipé</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 relative scroll-trigger fade-up delay-200">
+                    <div class="absolute -top-4 left-8 bg-brand-accent text-white p-2 rounded-full">
+                        <i data-lucide="quote" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <div class="flex text-brand-accent mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-gray-600 font-light italic mb-6">"Excellence et professionnalisme. La charpente traditionnelle qu'ils ont réalisée pour notre maison est une œuvre d'art."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-brand-dark font-bold">J</div>
+                        <div>
+                            <p class="font-medium text-brand-dark">Jean-Marc D.</p>
+                            <p class="text-xs text-gray-400">Construction neuve</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-brand-beige">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Info -->
+                <div class="scroll-trigger fade-right">
+                    <span class="text-brand-accent uppercase tracking-widest text-sm font-semibold">Contactez-nous</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mt-4 mb-8">Parlons de votre projet</h2>
+                    <p class="text-gray-600 font-light text-lg mb-10 max-w-md">
+                        Remplissez le formulaire ou appelez-nous directement. Nous serons ravis d'étudier vos besoins et de vous proposer un devis gratuit.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <a href="tel:+33558524456" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-brand-accent transition-colors duration-300">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-dark group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Téléphone</p>
+                                <p class="text-xl font-serif text-brand-dark group-hover:text-brand-accent transition-colors">05 58 52 44 56</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-brand-accent transition-colors duration-300">
+                                <i data-lucide="clock" class="w-5 h-5 text-brand-dark group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Horaires</p>
+                                <p class="text-xl font-serif text-brand-dark">Lun - Ven : 8h00 - 18h00</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-brand-accent transition-colors duration-300">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-dark group-hover:text-white transition-colors"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wide">Zone d'intervention</p>
+                                <p class="text-xl font-serif text-brand-dark">Landes & Pays Basque</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg border border-gray-100 scroll-trigger fade-left">
+                    <form onsubmit="event.preventDefault(); alert('Merci ! Votre demande a bien été envoyée.');" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="name" class="text-sm font-medium text-brand-charcoal">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors" placeholder="Votre nom" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="phone" class="text-sm font-medium text-brand-charcoal">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors" placeholder="Votre numéro" required>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-medium text-brand-charcoal">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors" placeholder="Votre email" required>
+                        </div>
+                        <div class="space-y-2">
+                            <label for="project" class="text-sm font-medium text-brand-charcoal">Description du projet</label>
+                            <textarea id="project" rows="4" class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors" placeholder="Racontez-nous votre projet..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-brand-accent text-white font-medium tracking-wide rounded-lg hover:bg-brand-accentHover transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-accent/20">
+                            Envoyer ma demande
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Col 1 -->
+                <div>
+                    <a href="#" class="text-3xl font-serif font-bold tracking-wide text-white block mb-6">
+                        CBR<span class="text-brand-accent">.</span>
+                    </a>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-6">
+                        L'art de la construction bois. Une entreprise artisanale dédiée à la qualité, l'esthétique et la durabilité pour tous vos projets de vie.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-accent transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-accent transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-accent transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-lg font-serif mb-6 text-brand-accent">Navigation</h4>
+                    <ul class="space-y-3 text-gray-400 font-light text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Réalisations</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-lg font-serif mb-6 text-brand-accent">Services</h4>
+                    <ul class="space-y-3 text-gray-400 font-light text-sm">
+                        <li>Charpente Traditionnelle</li>
+                        <li>Maison Ossature Bois</li>
+                        <li>Terrasse & Extérieur</li>
+                        <li>Aménagement Intérieur</li>
+                        <li>Rénovation & Extension</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-lg font-serif mb-6 text-brand-accent">Nous trouver</h4>
+                    <ul class="space-y-4 text-gray-400 font-light text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-accent mt-0.5"></i>
+                            <span>40000 Mont-de-Marsan, Landes<br>France</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-accent"></i>
+                            <span>05 58 52 44 56</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-accent"></i>
+                            <span>contact@cbr-construction.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-light">
+                <p>&copy; 2024 Construction Bois Rénovation. Tous droits réservés.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
